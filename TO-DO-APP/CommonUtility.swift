@@ -9,10 +9,31 @@
 import UIKit
 
 final class CommonUtility {
-    static func formatToString(_ date:Date) -> String {
+    static func formatToString(_ date: Date) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .short
         dateFormatter.timeStyle = .none
+        return dateFormatter.string(from: date)
+    }
+    
+    static func formatTimeToString(_ date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .none
+        dateFormatter.timeStyle = .short
+        return dateFormatter.string(from: date)
+    }
+
+    static func formatStringToDate(_ date: String) -> Date {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "hh:mm a"
+        return dateFormatter.date(from: date)!
+    }
+
+    static func currentTime () -> String {
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .none
+        dateFormatter.timeStyle = .short
         return dateFormatter.string(from: date)
     }
 }

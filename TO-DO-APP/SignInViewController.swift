@@ -23,7 +23,8 @@ class SignInViewController: UIViewController {
     @IBAction func onButtonSignInClicked(_ sender: Any) {
         let keychain = KeychainSwift()
         
-        if usernameTextField.text == String(userDefault.object(forKey: "name")) && passwordTextField.text == keychain.get("password") {
+        guard let userName = userDefault.object(forKey: "email") else {return}
+        if usernameTextField.text == String(describing: userName) && passwordTextField.text == keychain.get("password") {
             loginSuccess()
         } else {
             loginFail()
