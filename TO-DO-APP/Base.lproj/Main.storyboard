@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dBo-lQ-C2U">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Sign In View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TO_DO_APP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SignInViewController" customModule="TO_DO_APP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -21,17 +21,90 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8nO-cA-bg3">
-                                <rect key="frame" x="9" y="617" width="138" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_image" translatesAutoresizingMaskIntoConstraints="NO" id="z5d-yh-a1G">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aoo-z2-upo">
+                                <rect key="frame" x="16" y="329" width="343" height="145"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Create new account"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-username" translatesAutoresizingMaskIntoConstraints="NO" id="mjX-DJ-8IT">
+                                        <rect key="frame" x="41" y="41" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" background="user_name" disabledBackground="user_name" translatesAutoresizingMaskIntoConstraints="NO" id="QMT-Jh-Et3">
+                                        <rect key="frame" x="82" y="41" width="244" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-password" translatesAutoresizingMaskIntoConstraints="NO" id="9s6-4R-wg3">
+                                        <rect key="frame" x="41" y="95" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" background="user_name" disabledBackground="user_name" translatesAutoresizingMaskIntoConstraints="NO" id="lmu-YM-7v0">
+                                        <rect key="frame" x="82" y="95" width="244" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-username" translatesAutoresizingMaskIntoConstraints="NO" id="Qgh-d7-5uI">
+                                        <rect key="frame" x="41" y="41" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3IY-Qj-R7U">
+                                <rect key="frame" x="9" y="623" width="105" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
+                                <state key="normal" title="Create account">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <segue destination="dBo-lQ-C2U" kind="modal" id="YT8-Uw-Sat"/>
+                                    <segue destination="dBo-lQ-C2U" kind="modal" id="7i9-Ae-1d0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gt-Yu-qSi">
+                                <rect key="frame" x="253" y="623" width="115" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
+                                <state key="normal" title="Forgot password">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionForgotPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rfr-ey-yDK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kub-Dv-pyB">
+                                <rect key="frame" x="16" y="471" width="343" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                <state key="normal" title="Sign in" backgroundImage="button_login"/>
+                                <connections>
+                                    <action selector="onButtonSignInClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nlF-iH-Lil"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="z5d-yh-a1G" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0os-en-THJ"/>
+                            <constraint firstItem="z5d-yh-a1G" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="7pd-sc-KMg"/>
+                            <constraint firstAttribute="trailing" secondItem="z5d-yh-a1G" secondAttribute="trailing" id="Cq0-Vs-0Xb"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="z5d-yh-a1G" secondAttribute="bottom" id="GWD-zE-zWF"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="z5d-yh-a1G" id="rN0-u0-rmo"/>
+                        <outlet property="formLoginView" destination="Aoo-z2-upo" id="lPQ-C4-tOJ"/>
+                        <outlet property="iconPasswordView" destination="9s6-4R-wg3" id="ZTa-Kc-WsK"/>
+                        <outlet property="iconUserView" destination="Qgh-d7-5uI" id="KJ2-tl-9Tf"/>
+                        <outlet property="passwordTextField" destination="lmu-YM-7v0" id="Hs0-lX-6aC"/>
+                        <outlet property="usernameTextField" destination="QMT-Jh-Et3" id="TFW-sr-2f1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -176,7 +249,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="background_image" width="375" height="667"/>
+        <image name="button_login" width="325" height="55"/>
         <image name="header_register" width="375" height="250"/>
+        <image name="icon-password" width="20" height="22"/>
+        <image name="icon-username" width="20" height="19"/>
         <image name="icon_back" width="21" height="21"/>
         <image name="icon_birthday" width="20" height="21"/>
         <image name="icon_camera" width="50" height="50"/>
@@ -185,6 +262,7 @@
         <image name="icon_gender" width="19" height="25"/>
         <image name="icon_name" width="20" height="19"/>
         <image name="icon_password" width="20" height="22"/>
+        <image name="user_name" width="102" height="19"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="KJV-gM-cQs"/>
