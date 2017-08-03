@@ -9,7 +9,7 @@
 import UIKit
 
 class CreateTaskViewController: UIViewController {
-    
+
     @IBOutlet weak var labelSelectDate: UILabel!
     @IBOutlet weak var buttonRepeat: UIButton!
     @IBOutlet weak var buttonPeople: UIButton!
@@ -25,91 +25,173 @@ class CreateTaskViewController: UIViewController {
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var txtDescription: UITextField!
     @IBOutlet weak var txtTitle: UITextField!
+    @IBOutlet weak var buttonSelectTime: UIButton!
 
-    var task = TaskModel()
+    var task: TaskModel?
+    let sharedDatabaseManager = DatabaseManager.shared
+    let taskTable = DatabaseManager.shared.connectTable
 
-    @IBAction func buttonCreateTask(_ sender: Any) {}
+    @IBAction func buttonCreateTask(_ sender: Any) {
+        if let descriptionTask = task?.descriptionTask,
+            let repeatTime = task?.timeRepeat,
+            let location = task?.location,
+            let fromTime = task?.fromTime,
+            let toTime = task?.toTime,
+            let title = task?.titleTask,
+            let allDay = task?.allDay,
+            let selectDate = task?.selectDate {
+                taskTable?.setValue(title, forKey: "title")
+                taskTable?.setValue(descriptionTask, forKey: "description_task")
+                taskTable?.setValue(CommonUtility.formatToString(selectDate), forKey: "select_date")
+                taskTable?.setValue(location, forKey: "location")
+                taskTable?.setValue(repeatTime, forKey: "repeat_task")
+                taskTable?.setValue(fromTime, forKey: "from_time")
+                taskTable?.setValue(toTime, forKey: "to_time")
+                taskTable?.setValue(allDay, forKey: "all_day")
+        }
+        let saveInfo = sharedDatabaseManager.saveContext()
+        var message = ""
+        if saveInfo {
+            message = "Save success!"
+        } else {
+            message = "Sorry save task failure!"
+        }
+        let alert = UIAlertController(title: "Save task", message: message,
+            preferredStyle: UIAlertControllerStyle.alert)
+        let actionCancel = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil)
+        alert.addAction(actionCancel)
+        if !message.isEmpty {
+            let actionOk = UIAlertAction(title: "Ok",
+                style: UIAlertActionStyle.default, handler: { (UIAlertAction) in
+                let seguae = self.storyboard?.instantiateViewController(withIdentifier: "MainScreenTask")
+                if let _seguae = seguae {
+                    self.show(_seguae, sender: self)
+                }
 
-    @IBAction func buttonCancelCreateTask(_ sender: Any) {}
-    
-    @IBAction func inputDescription(_ sender: Any) {
+                self.task = nil
+            })
+            alert.addAction(actionOk)
+        }
+        self.present(alert, animated: true, completion: nil)
+    }
+
+    @IBAction func buttonCancelCreateTask(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+        task = nil
+    }
+
+    @IBAction func inputDescriptionChanged(_ sender: Any) {
         guard let description = txtDescription.text else {return}
-        task.descriptionTask = description
-        labelDescription.text = task.descriptionTask
+        task?.descriptionTask = description
+        labelDescription.text = description
     }
-    
-    @IBAction func inputTitleTask(_ sender: Any) {
+
+    @IBAction func inputTitleChanged(_ sender: Any) {
         guard let titleTask = txtTitle.text else {return}
-        task.titleTask = titleTask
-        labelTitle.text = task.titleTask
+        task?.titleTask = titleTask
+        labelTitle.text = titleTask
     }
-    
+
     @IBAction func buttonPressLocation(_ sender: Any) {
         let alert = UIAlertController(title: "Location", message: "Press location for task", preferredStyle: UIAlertControllerStyle.alert)
         alert.addTextField { (txtLocation) in
+            txtLocation.text = self.task?.location
             txtLocation.placeholder = "Location"
         }
         alert.addAction(UIAlertAction(title: "Save", style: UIAlertActionStyle.default, handler: { _alert -> Void in
-            let firstTextField = alert.textFields![0] as UITextField
-            self.task.location = firstTextField.text!
-            self.labelLocation.text = self.task.location
+            guard let firstTextField = alert.textFields?[0] else {return}
+            if let location = firstTextField.text {
+                self.task?.location = location
+                self.labelLocation.text = location
+            }
         }))
         self.present(alert, animated: true, completion: nil)
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        DatabaseManager.shared.connectTable("Task")
+        task = TaskModel()
+        updateTaskInfo()
+    }
 
-        labelSelectDate.text = CommonUtility.formatToString(task.selectDate) 
-        labelFromTime.text = task.fromTime
-        labelToTime.text = task.toTime
-        labelRepeat.text = String(task.timeRepeat) + " minute"
-        labelLocation.text = task.location
-        switchAllDay.setOn(task.allDay, animated: false)
-        labelTitle.text = task.titleTask
-        txtTitle.text = task.titleTask
-        labelDescription.text = task.descriptionTask
-        txtDescription.text = task.descriptionTask
+    func updateTaskInfo () {
+        var tmpSelectDate = CommonUtility.formatToString(Date())
+        var turnSwitch = false
+        if let descriptionTask = task?.descriptionTask,
+            let repeatTime = task?.timeRepeat,
+            let location = task?.location,
+            let tmpTurnSwitch = task?.allDay,
+            let fromTime = task?.fromTime,
+            let toTime = task?.toTime,
+            let title = task?.titleTask,
+            let selectDate = task?.selectDate {
+                labelDescription.text = descriptionTask
+                txtDescription.text = descriptionTask
+                labelRepeat.text = "\(repeatTime) minute"
+                labelLocation.text = location
+                turnSwitch = tmpTurnSwitch
+                labelFromTime.text = fromTime
+                labelToTime.text = toTime
+                labelTitle.text = title
+                txtTitle.text = title
+                tmpSelectDate = CommonUtility.formatToString(selectDate)
+        }
+        labelSelectDate.text = tmpSelectDate
+        switchAllDay.setOn(turnSwitch, animated: false)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let selectDate = segue.destination as? DatePickerViewController {
-            selectDate.selectDate = task.selectDate
+            selectDate.selectDate = task?.selectDate
             selectDate.pickDateOptionCompletion = {(selectDate) in
                 guard let selectDate = selectDate else {return}
-                self.task.selectDate = selectDate
+                self.task?.selectDate = selectDate
                 self.labelSelectDate.text = CommonUtility.formatToString(selectDate)
             }
         }
 
         if let selectTime = segue.destination as? TimeViewController {
-            selectTime.fromTime = task.fromTime
-            selectTime.toTime = task.toTime
+            selectTime.fromTime = task?.fromTime
+            selectTime.toTime = task?.toTime
             selectTime.pickTimeOptionCompletion = {(fromTime, toTime) in
                 guard let fromTime = fromTime, let toTime = toTime else {return}
-                self.task.fromTime = fromTime
-                self.task.toTime = toTime
-
+                self.task?.fromTime = fromTime
+                self.task?.toTime = toTime
                 self.labelFromTime.text = fromTime
                 self.labelToTime.text = toTime
             }
         }
 
         if let repeatTimeTask = segue.destination as? RepeatTimeViewController {
-            repeatTimeTask.timeRepeat = task.timeRepeat
+            repeatTimeTask.timeRepeat = task?.timeRepeat
             repeatTimeTask.pickRepeatOptionCompletion = {(timeRepeat) in
                 guard let timeRepeat = timeRepeat else {return}
-                self.task.timeRepeat = timeRepeat
+                self.task?.timeRepeat = timeRepeat
                 self.labelRepeat.text = String(timeRepeat) + " minute"
             }
         }
     }
-    
+
     @IBAction func switchChooseAllDay(_ sender: Any) {
-        task.allDay = switchAllDay.isOn ? true : false
+        var current_time = ""
+        if switchAllDay.isOn {
+            task?.allDay = true
+            current_time = ""
+            buttonSelectTime.isEnabled = false
+        } else {
+            task?.allDay = false
+            current_time = CommonUtility.currentTime()
+            buttonSelectTime.isEnabled = true
+        }
+        task?.fromTime = current_time
+        task?.toTime = current_time
+        labelFromTime.text = current_time
+        labelToTime.text = current_time
+
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
+    
 }
