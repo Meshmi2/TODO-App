@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		602541401F2F3A420004FDC7 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6025413E1F2F3A420004FDC7 /* Model.xcdatamodeld */; };
+		605234551F3171420005BD21 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605234541F3171420005BD21 /* TaskModel.swift */; };
 		606505B71F2EB5E500134495 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606505B61F2EB5E500134495 /* DatabaseManager.swift */; };
 		606505BE1F2ED7ED00134495 /* CommonUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606505BD1F2ED7ED00134495 /* CommonUtility.swift */; };
 		606505C01F2EDC8600134495 /* KeychainSwiftDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606505BF1F2EDC8600134495 /* KeychainSwiftDistrib.swift */; };
@@ -18,6 +20,10 @@
 		60B2FEB11F2BA69C00A6185F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60B2FEAF1F2BA69C00A6185F /* LaunchScreen.storyboard */; };
 		60B2FEBC1F2BA69C00A6185F /* TO_DO_APPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B2FEBB1F2BA69C00A6185F /* TO_DO_APPTests.swift */; };
 		60B2FEC71F2BA69C00A6185F /* TO_DO_APPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B2FEC61F2BA69C00A6185F /* TO_DO_APPUITests.swift */; };
+		60F1CDEC1F3018A400821553 /* CreateTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F1CDEB1F3018A400821553 /* CreateTaskViewController.swift */; };
+		60F1CDEE1F30292E00821553 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F1CDED1F30292E00821553 /* DatePickerViewController.swift */; };
+		60F1CDF01F304E5500821553 /* TimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F1CDEF1F304E5500821553 /* TimeViewController.swift */; };
+		60F1CDF21F305F4C00821553 /* RepeatTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F1CDF11F305F4C00821553 /* RepeatTimeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6025413F1F2F3A420004FDC7 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		605234541F3171420005BD21 /* TaskModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
 		606505B61F2EB5E500134495 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		606505BD1F2ED7ED00134495 /* CommonUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonUtility.swift; sourceTree = "<group>"; };
 		606505BF1F2EDC8600134495 /* KeychainSwiftDistrib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainSwiftDistrib.swift; sourceTree = "<group>"; };
@@ -55,6 +63,10 @@
 		60B2FEC21F2BA69C00A6185F /* TO-DO-APPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TO-DO-APPUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		60B2FEC61F2BA69C00A6185F /* TO_DO_APPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TO_DO_APPUITests.swift; sourceTree = "<group>"; };
 		60B2FEC81F2BA69C00A6185F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60F1CDEB1F3018A400821553 /* CreateTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTaskViewController.swift; sourceTree = "<group>"; };
+		60F1CDED1F30292E00821553 /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		60F1CDEF1F304E5500821553 /* TimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeViewController.swift; sourceTree = "<group>"; };
+		60F1CDF11F305F4C00821553 /* RepeatTimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepeatTimeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				606505B61F2EB5E500134495 /* DatabaseManager.swift */,
+				605234541F3171420005BD21 /* TaskModel.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -117,7 +130,6 @@
 			children = (
 				606505BF1F2EDC8600134495 /* KeychainSwiftDistrib.swift */,
 				60B2FEA61F2BA69B00A6185F /* AppDelegate.swift */,
-				60B2FEA81F2BA69B00A6185F /* SignInViewController.swift */,
 				60B2FEAA1F2BA69C00A6185F /* Main.storyboard */,
 				60B2FEAD1F2BA69C00A6185F /* Assets.xcassets */,
 				606505BD1F2ED7ED00134495 /* CommonUtility.swift */,
@@ -125,7 +137,12 @@
 				60B2FEAF1F2BA69C00A6185F /* LaunchScreen.storyboard */,
 				606505B51F2EB59C00134495 /* model */,
 				607750B61F2B1B0B00DB1CAF /* SignUpViewController.swift */,
-				60B2FEA81F2BA69B00A6185F /* ViewController.swift */,
+				60B2FEA81F2BA69B00A6185F /* SignInViewController.swift */,
+				6025413E1F2F3A420004FDC7 /* Model.xcdatamodeld */,
+				60F1CDEB1F3018A400821553 /* CreateTaskViewController.swift */,
+				60F1CDED1F30292E00821553 /* DatePickerViewController.swift */,
+				60F1CDEF1F304E5500821553 /* TimeViewController.swift */,
+				60F1CDF11F305F4C00821553 /* RepeatTimeViewController.swift */,
 			);
 			path = "TO-DO-APP";
 			sourceTree = "<group>";
@@ -283,11 +300,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				606505C01F2EDC8600134495 /* KeychainSwiftDistrib.swift in Sources */,
+				60F1CDF01F304E5500821553 /* TimeViewController.swift in Sources */,
 				607750B71F2B1B0B00DB1CAF /* SignUpViewController.swift in Sources */,
+				602541401F2F3A420004FDC7 /* Model.xcdatamodeld in Sources */,
+				605234551F3171420005BD21 /* TaskModel.swift in Sources */,
+				60F1CDF21F305F4C00821553 /* RepeatTimeViewController.swift in Sources */,
 				606505BE1F2ED7ED00134495 /* CommonUtility.swift in Sources */,
 				606505B71F2EB5E500134495 /* DatabaseManager.swift in Sources */,
 				60B2FEA91F2BA69B00A6185F /* SignInViewController.swift in Sources */,
 				60B2FEA71F2BA69B00A6185F /* AppDelegate.swift in Sources */,
+				60F1CDEE1F30292E00821553 /* DatePickerViewController.swift in Sources */,
+				60F1CDEC1F3018A400821553 /* CreateTaskViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,6 +578,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6025413E1F2F3A420004FDC7 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6025413F1F2F3A420004FDC7 /* Model.xcdatamodel */,
+			);
+			currentVersion = 6025413F1F2F3A420004FDC7 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 60B2FE9B1F2BA69B00A6185F /* Project object */;
 }
