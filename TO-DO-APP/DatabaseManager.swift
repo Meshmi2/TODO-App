@@ -31,7 +31,6 @@ class DatabaseManager {
     
     func saveContext () -> Bool {
         guard self.managedContext.hasChanges else { return false}
-        
         do {
             try self.managedContext.save()
             return true
@@ -74,5 +73,27 @@ class DatabaseManager {
         guard let listRecords = results else {return []}
         return listRecords
     }
-    
+
+    func fetchDataWithQuery(_ month: String) -> [Any] {
+        guard let fetchRequest = fetchRequest else {return []}
+        fetchRequest.predicate = NSPredicate(format: "select_date LIKE %@  AND status IN {'completed', 'snoozed', 'overdue'}", "??/?\(month)/????")
+        var results: [Any]?
+        do {
+            results = try managedContext.fetch(fetchRequest)
+            managedContext.fetch
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+        guard let listRecords = results else {return []}
+        return listRecords
+    }
+
+    func resetData () {
+        let request = NSBatchDeleteRequest(fetchRequest: fetchRequest as! NSFetchRequest<NSFetchRequestResult>)
+        do {
+            try managedContext.execute(request)
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+    }
 }

@@ -26,8 +26,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
         let shared = DatabaseManager.shared
         shared.connectTable("Task")
-        if let tasks = shared.fetchDataWithDate() as? [Task] {
-            print(tasks.count)
+        if let tasks = shared.fetchDataFromTable() as? [Task] {
             arrTasks.append(contentsOf: tasks)
         }
     }

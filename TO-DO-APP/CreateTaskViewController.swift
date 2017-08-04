@@ -48,10 +48,11 @@ class CreateTaskViewController: UIViewController {
                 taskTable?.setValue(fromTime, forKey: "from_time")
                 taskTable?.setValue(toTime, forKey: "to_time")
                 taskTable?.setValue(allDay, forKey: "all_day")
+                taskTable?.setValue("init", forKey: "status")
         }
         let saveInfo = sharedDatabaseManager.saveContext()
         var message = ""
-        if saveInfo {
+        if saveInfo {   
             message = "Save success!"
         } else {
             message = "Sorry save task failure!"
@@ -63,12 +64,8 @@ class CreateTaskViewController: UIViewController {
         if !message.isEmpty {
             let actionOk = UIAlertAction(title: "Ok",
                 style: UIAlertActionStyle.default, handler: { (UIAlertAction) in
-                let seguae = self.storyboard?.instantiateViewController(withIdentifier: "MainScreenTask")
-                if let _seguae = seguae {
-                    self.show(_seguae, sender: self)
-                }
-
-                self.task = nil
+                    self.task = nil
+                    self.dismiss(animated: true, completion: nil)
             })
             alert.addAction(actionOk)
         }
@@ -110,7 +107,6 @@ class CreateTaskViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        DatabaseManager.shared.connectTable("Task")
         task = TaskModel()
         updateTaskInfo()
     }
