@@ -36,4 +36,26 @@ final class CommonUtility {
         dateFormatter.timeStyle = .short
         return dateFormatter.string(from: date)
     }
+
+    static func getDayName() -> String {
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE"
+        return dateFormatter.string(from: date)
+    }
+
+    static func getDayInTheDay() -> String {
+        let date = Date()
+        let calendar = Calendar.current
+        let hour = calendar.component(.hour, from: date)
+        var dayInTheDay = "Welcome"
+        if 6 < hour && hour <= 11 {
+            dayInTheDay = "Good morning"
+        } else if 12 <= hour && hour < 18 {
+            dayInTheDay = "Good afternoon"
+        } else {
+            dayInTheDay = "Good evening"
+        }
+        return dayInTheDay
+    }
 }
