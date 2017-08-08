@@ -13,13 +13,14 @@ class SignInViewController: UIViewController {
     
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var formLoginView: UIView!
-    
     @IBOutlet weak var iconUserView: UIImageView!
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var iconPasswordView: UIImageView!
     @IBOutlet weak var passwordTextField: UITextField!
     let userDefault = UserDefaults.standard
     
+    @IBAction func unwindToSignIn(segue:UIStoryboardSegue) {}
+
     @IBAction func onButtonSignInClicked(_ sender: Any) {
         let keychain = KeychainSwift()
         
@@ -43,17 +44,22 @@ class SignInViewController: UIViewController {
     }
     
     func loginSuccess() {
-        userDefault.set(true, forKey: "isLogin")
+        AppData.shared.saveUserInfo()
         userDefault.synchronize()
         self.dismiss(animated: true, completion: nil)
+    
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        if AppData.shared.userInfo != nil {
+            AppData.shared.loadUserInfo()
+        }
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
     }
+    
+    
 }

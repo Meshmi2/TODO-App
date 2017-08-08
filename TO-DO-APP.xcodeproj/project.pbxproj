@@ -26,6 +26,12 @@
 		60F1CDEE1F30292E00821553 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F1CDED1F30292E00821553 /* DatePickerViewController.swift */; };
 		60F1CDF01F304E5500821553 /* TimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F1CDEF1F304E5500821553 /* TimeViewController.swift */; };
 		60F1CDF21F305F4C00821553 /* RepeatTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F1CDF11F305F4C00821553 /* RepeatTimeViewController.swift */; };
+		D54EB0901F302D1E0038C9A3 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54EB08F1F302D1E0038C9A3 /* MenuViewController.swift */; };
+		D569ABB21F30624D00AAA76F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D569ABB11F30624D00AAA76F /* SettingsViewController.swift */; };
+		D588CE611F34666700DD63BB /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D588CE601F34666700DD63BB /* AppData.swift */; };
+		D5A092111F32ADF500BF00D7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A092101F32ADF500BF00D7 /* ProfileViewController.swift */; };
+		D5A092131F32AE0200BF00D7 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A092121F32AE0200BF00D7 /* AlertViewController.swift */; };
+		D5DBF1031F3329CD004FFEE6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DBF1021F3329CD004FFEE6 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +77,12 @@
 		60F1CDED1F30292E00821553 /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 		60F1CDEF1F304E5500821553 /* TimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeViewController.swift; sourceTree = "<group>"; };
 		60F1CDF11F305F4C00821553 /* RepeatTimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepeatTimeViewController.swift; sourceTree = "<group>"; };
+		D54EB08F1F302D1E0038C9A3 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		D569ABB11F30624D00AAA76F /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		D588CE601F34666700DD63BB /* AppData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
+		D5A092101F32ADF500BF00D7 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		D5A092121F32AE0200BF00D7 /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		D5DBF1021F3329CD004FFEE6 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +115,8 @@
 			children = (
 				606505B61F2EB5E500134495 /* DatabaseManager.swift */,
 				605234541F3171420005BD21 /* TaskModel.swift */,
+				D5DBF1021F3329CD004FFEE6 /* User.swift */,
+				D588CE601F34666700DD63BB /* AppData.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -149,6 +163,10 @@
 				60F1CDF11F305F4C00821553 /* RepeatTimeViewController.swift */,
 				6079123B1F330FBA008D5058 /* MainViewController.swift */,
 				6079123F1F331391008D5058 /* TaskTableViewCell.swift */,
+				D54EB08F1F302D1E0038C9A3 /* MenuViewController.swift */,
+				D569ABB11F30624D00AAA76F /* SettingsViewController.swift */,
+				D5A092101F32ADF500BF00D7 /* ProfileViewController.swift */,
+				D5A092121F32AE0200BF00D7 /* AlertViewController.swift */,
 			);
 			path = "TO-DO-APP";
 			sourceTree = "<group>";
@@ -309,16 +327,22 @@
 				606505C01F2EDC8600134495 /* KeychainSwiftDistrib.swift in Sources */,
 				6079123C1F330FBA008D5058 /* MainViewController.swift in Sources */,
 				60F1CDF01F304E5500821553 /* TimeViewController.swift in Sources */,
-				607750B71F2B1B0B00DB1CAF /* SignUpViewController.swift in Sources */,
 				602541401F2F3A420004FDC7 /* Model.xcdatamodeld in Sources */,
 				605234551F3171420005BD21 /* TaskModel.swift in Sources */,
 				60F1CDF21F305F4C00821553 /* RepeatTimeViewController.swift in Sources */,
+				D5A092111F32ADF500BF00D7 /* ProfileViewController.swift in Sources */,
+				607750B71F2B1B0B00DB1CAF /* SignUpViewController.swift in Sources */,
+				D5DBF1031F3329CD004FFEE6 /* User.swift in Sources */,
+				D5A092131F32AE0200BF00D7 /* AlertViewController.swift in Sources */,
+				D54EB0901F302D1E0038C9A3 /* MenuViewController.swift in Sources */,
 				606505BE1F2ED7ED00134495 /* CommonUtility.swift in Sources */,
 				606505B71F2EB5E500134495 /* DatabaseManager.swift in Sources */,
 				60B2FEA91F2BA69B00A6185F /* SignInViewController.swift in Sources */,
 				60B2FEA71F2BA69B00A6185F /* AppDelegate.swift in Sources */,
 				60F1CDEE1F30292E00821553 /* DatePickerViewController.swift in Sources */,
 				60F1CDEC1F3018A400821553 /* CreateTaskViewController.swift in Sources */,
+				D569ABB21F30624D00AAA76F /* SettingsViewController.swift in Sources */,
+				D588CE611F34666700DD63BB /* AppData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
