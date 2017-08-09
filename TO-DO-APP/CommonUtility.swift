@@ -8,11 +8,14 @@
 
 import UIKit
 
+
 final class CommonUtility {
+    enum Months: Int {case January = 1, February, March, April, May, June, July, August, September, October, November, December}
+    
     static func formatToString(_ date: Date) -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .short
         dateFormatter.timeStyle = .none
+        dateFormatter.dateFormat = "dd/MM/yyyy"
         return dateFormatter.string(from: date)
     }
     
@@ -57,5 +60,40 @@ final class CommonUtility {
             dayInTheDay = "Good evening"
         }
         return dayInTheDay
+    }
+
+    static func getCurrenMonth () -> String {
+        let date = Date()
+        let calendar = Calendar.current
+        return String(calendar.component(.month, from: date))
+    }
+
+    static func getMonth (_ month: Months) -> String {
+        switch month {
+        case .January:
+            return "January"
+        case .February:
+            return "February"
+        case .March:
+            return "March"
+        case .April:
+            return "April"
+        case .May:
+            return "May"
+        case .June:
+            return "June"
+        case .July:
+            return "July"
+        case .August:
+            return "August"
+        case .September:
+            return "September"
+        case .October:
+            return "October"
+        case .November:
+            return "November"
+        case .December:
+            return "December"
+        }
     }
 }
