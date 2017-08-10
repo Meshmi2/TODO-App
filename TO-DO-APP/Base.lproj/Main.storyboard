@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Rom-5h-pbZ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -678,7 +678,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nGo-gn-IIG" id="Jam-Lb-4Jf">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="emC-GU-2Fx">
@@ -1621,12 +1621,116 @@
             </objects>
             <point key="canvasLocation" x="2566" y="-675"/>
         </scene>
+        <!--Calendar View Controller-->
+        <scene sceneID="4si-OL-VIr">
+            <objects>
+                <viewController id="Rom-5h-pbZ" customClass="CalendarViewController" customModule="TO_DO_APP" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="onZ-u8-INd"/>
+                        <viewControllerLayoutGuide type="bottom" id="0Hm-Au-4dW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xvy-eS-Ffl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Wb-cC-e1Y">
+                                <rect key="frame" x="155" y="49" width="70" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="February">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroud_button" translatesAutoresizingMaskIntoConstraints="NO" id="ASv-it-ALS">
+                                <rect key="frame" x="0.0" y="20" width="375" height="124"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wSc-PV-ZqZ">
+                                <rect key="frame" x="337" y="41" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="icon_search"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background_calendar_screen" translatesAutoresizingMaskIntoConstraints="NO" id="l4K-44-90x">
+                                <rect key="frame" x="0.0" y="142" width="375" height="525"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eQs-N9-6hV" customClass="FSCalendar">
+                                <rect key="frame" x="0.0" y="28" width="375" height="382"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpI-4M-Pqn">
+                                        <rect key="frame" x="21" y="12" width="21" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="icon_menu"/>
+                                        <connections>
+                                            <segue destination="TJV-Rq-hYh" kind="modal" id="eoc-VD-ajX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="headerTitleTextSize">
+                                        <real key="value" value="17"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="weekdayTextSize">
+                                        <real key="value" value="11"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="headerHeight">
+                                        <real key="value" value="80"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleDefaultColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="headerTitleColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="weekdayTextColor">
+                                        <color key="value" red="0.93511172279792742" green="0.93511172279792742" blue="0.93511172279792742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectionColor">
+                                        <color key="value" red="0.63490783373973281" green="0.62442791513556573" blue="0.63526317892072526" alpha="0.5746313820422535" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="subtitleWeekendColor">
+                                        <color key="value" red="0.81841165689999995" green="0.81841165689999995" blue="0.81841165689999995" alpha="0.11916813380281691" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="scrollEnabled" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="allowsMultipleSelection" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3xn-mx-SLD">
+                                <rect key="frame" x="160" y="592" width="55" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="icon_plus" backgroundImage="background_plus"/>
+                                <connections>
+                                    <segue destination="i3o-aI-bqX" kind="modal" id="cff-Js-2tb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e80-9S-pkf">
+                                <rect key="frame" x="16" y="457" width="343" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="fsCalendar" destination="eQs-N9-6hV" id="oZJ-h1-0YL"/>
+                        <outlet property="labelNumberTaskOfDay" destination="e80-9S-pkf" id="KRl-Dg-d6N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hev-uo-Bn5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2842" y="877"/>
+        </scene>
     </scenes>
     <resources>
         <image name="active" width="189" height="3"/>
         <image name="avatar" width="30" height="30"/>
         <image name="backgroud_button" width="325" height="55"/>
         <image name="backgroud_button_month" width="180" height="64"/>
+        <image name="background_calendar_screen" width="375" height="667"/>
         <image name="background_image" width="375" height="667"/>
         <image name="background_overview" width="375" height="667"/>
         <image name="background_plus" width="55" height="55"/>
@@ -1654,6 +1758,7 @@
         <image name="icon_password" width="20" height="22"/>
         <image name="icon_plus" width="22" height="22"/>
         <image name="icon_profile" width="20" height="18"/>
+        <image name="icon_search" width="22" height="22"/>
         <image name="icon_settings" width="21" height="21"/>
         <image name="icon_timeline" width="23" height="23"/>
         <image name="overdue" width="13" height="13"/>
@@ -1661,8 +1766,8 @@
         <image name="user_name" width="102" height="19"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="yUj-5I-jvE"/>
-        <segue reference="vMl-wO-qqN"/>
-        <segue reference="Nrq-R7-a9B"/>
+        <segue reference="Uv7-WK-tIQ"/>
+        <segue reference="cff-Js-2tb"/>
+        <segue reference="eoc-VD-ajX"/>
     </inferredMetricsTieBreakers>
 </document>

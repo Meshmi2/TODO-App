@@ -1,12 +1,15 @@
 PODS:
-  - UICircularProgressRing (1.6.2)
+  - FSCalendar (2.7.9)
+  - UICircularProgressRing (1.7.0)
 
 DEPENDENCIES:
+  - FSCalendar
   - UICircularProgressRing
 
 SPEC CHECKSUMS:
-  UICircularProgressRing: f25e366e0624d87973192b67e572c0712acbae85
+  FSCalendar: a04b09f16f811bc92e82f3cf852a15225233b9d5
+  UICircularProgressRing: 35c3d291b679161ea27fb6216fee58c40a4bb597
 
-PODFILE CHECKSUM: '095c3414efd5f011bf951eb43cf5b2935e0b4a97'
+PODFILE CHECKSUM: ca0cc70ac1bfbfba326976499cb7dd9b0f8114a7
 
 COCOAPODS: 1.2.1

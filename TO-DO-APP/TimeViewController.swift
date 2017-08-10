@@ -36,8 +36,8 @@ class TimeViewController: UIViewController {
         guard let fromTime = fromTime, let toTime = toTime else {return}
         fromTimePicker.datePickerMode = .time
         toTimePicker.datePickerMode = .time
-        fromTimePicker.setDate(CommonUtility.formatStringToDate(fromTime), animated: false)
-        toTimePicker.setDate(CommonUtility.formatStringToDate(toTime), animated: false)
+        fromTimePicker.setDate(CommonUtility.formatStringToTime(fromTime), animated: false)
+        toTimePicker.setDate(CommonUtility.formatStringToTime(toTime), animated: false)
     }
 
     override func didReceiveMemoryWarning() {

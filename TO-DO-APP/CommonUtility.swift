@@ -26,9 +26,15 @@ final class CommonUtility {
         return dateFormatter.string(from: date)
     }
 
-    static func formatStringToDate(_ date: String) -> Date {
+    static func formatStringToTime(_ date: String) -> Date {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "hh:mm a"
+        return dateFormatter.date(from: date)!
+    }
+    
+    static func formatStringToDate(_ date: String) -> Date {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy"
         return dateFormatter.date(from: date)!
     }
 
