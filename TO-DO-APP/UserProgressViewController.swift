@@ -58,7 +58,6 @@ class UserProgressViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        shared.connectTable("Task")
         if let month = CommonUtility.Months(rawValue: indexMonth) {
             monthLabel.text = CommonUtility.getMonth(month)
         }

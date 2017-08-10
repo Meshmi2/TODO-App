@@ -27,7 +27,6 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        DatabaseManager.shared.connectTable("Task")
         guard let resultTask = DatabaseManager.shared.fetchDataFromTable() as? [Task] else {return}
         taskTemp = resultTask
         let dates = loadDatesHasTask(resultTask)

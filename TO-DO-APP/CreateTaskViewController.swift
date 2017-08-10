@@ -29,30 +29,11 @@ class CreateTaskViewController: UIViewController {
 
     var task: TaskModel?
     let sharedDatabaseManager = DatabaseManager.shared
-    let taskTable = DatabaseManager.shared.connectTable
 
     @IBAction func buttonCreateTask(_ sender: Any) {
-        if let descriptionTask = task?.descriptionTask,
-            let repeatTime = task?.timeRepeat,
-            let location = task?.location,
-            let fromTime = task?.fromTime,
-            let toTime = task?.toTime,
-            let title = task?.titleTask,
-            let allDay = task?.allDay,
-            let selectDate = task?.selectDate {
-                taskTable?.setValue(title, forKey: "title")
-                taskTable?.setValue(descriptionTask, forKey: "description_task")
-                taskTable?.setValue(CommonUtility.formatToString(selectDate), forKey: "select_date")
-                taskTable?.setValue(location, forKey: "location")
-                taskTable?.setValue(repeatTime, forKey: "repeat_task")
-                taskTable?.setValue(fromTime, forKey: "from_time")
-                taskTable?.setValue(toTime, forKey: "to_time")
-                taskTable?.setValue(allDay, forKey: "all_day")
-                taskTable?.setValue("init", forKey: "status")
-        }
-        let saveInfo = sharedDatabaseManager.saveContext()
+        let saveInfo = DatabaseManager.shared.addTask(task)
         var message = ""
-        if saveInfo {   
+        if saveInfo {
             message = "Save success!"
         } else {
             message = "Sorry save task failure!"
