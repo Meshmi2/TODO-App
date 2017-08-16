@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		012E0F7B7D68F13B2BECAD5C /* Pods_TO_DO_APP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2835DEE820796CB9537BA05 /* Pods_TO_DO_APP.framework */; };
 		345E9411AC797D6A9429A120 /* Pods_TO_DO_APPUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 673E1AE651573E93C1338011 /* Pods_TO_DO_APPUITests.framework */; };
-		3F10712EA52D5601FBD7E82B /* Pods_TO_DO_APPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09470E5CD56A18311DB916A0 /* Pods_TO_DO_APPTests.framework */; };
+		3F10712EA52D5601FBD7E82B /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
 		602541401F2F3A420004FDC7 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6025413E1F2F3A420004FDC7 /* Model.xcdatamodeld */; };
 		605234551F3171420005BD21 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605234541F3171420005BD21 /* TaskModel.swift */; };
 		606505B71F2EB5E500134495 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606505B61F2EB5E500134495 /* DatabaseManager.swift */; };
@@ -32,13 +32,16 @@
 		60F1CDEE1F30292E00821553 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F1CDED1F30292E00821553 /* DatePickerViewController.swift */; };
 		60F1CDF01F304E5500821553 /* TimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F1CDEF1F304E5500821553 /* TimeViewController.swift */; };
 		60F1CDF21F305F4C00821553 /* RepeatTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F1CDF11F305F4C00821553 /* RepeatTimeViewController.swift */; };
+		839B9C0E4726AEDFB5D56642 /* Pods_TO_DO_APPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F6C64D96D3FF33D8C82D562 /* Pods_TO_DO_APPTests.framework */; };
+		D51AF1731F3409B500177854 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51AF1721F3409B500177854 /* CalendarViewController.swift */; };
 		D54EB0901F302D1E0038C9A3 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54EB08F1F302D1E0038C9A3 /* MenuViewController.swift */; };
+		D5617C5A1F3B2027008BC07C /* UserProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5617C581F3B2027008BC07C /* UserProgressViewController.swift */; };
+		D5617C5B1F3B2027008BC07C /* UserProgressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5617C591F3B2027008BC07C /* UserProgressViewController.xib */; };
 		D569ABB21F30624D00AAA76F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D569ABB11F30624D00AAA76F /* SettingsViewController.swift */; };
 		D588CE611F34666700DD63BB /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D588CE601F34666700DD63BB /* AppData.swift */; };
 		D5A092111F32ADF500BF00D7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A092101F32ADF500BF00D7 /* ProfileViewController.swift */; };
 		D5A092131F32AE0200BF00D7 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A092121F32AE0200BF00D7 /* AlertViewController.swift */; };
 		D5DBF1031F3329CD004FFEE6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DBF1021F3329CD004FFEE6 /* User.swift */; };
-		D51AF1731F3409B500177854 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51AF1721F3409B500177854 /* CalendarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,9 +62,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		09470E5CD56A18311DB916A0 /* Pods_TO_DO_APPTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TO_DO_APPTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		44D37841448285390FAECFD6 /* Pods-TO-DO-APPUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TO-DO-APPUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TO-DO-APPUITests/Pods-TO-DO-APPUITests.release.xcconfig"; sourceTree = "<group>"; };
-		4899F5BA74C318A93F2B4BE4 /* Pods-TO-DO-APP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TO-DO-APP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TO-DO-APP/Pods-TO-DO-APP.debug.xcconfig"; sourceTree = "<group>"; };
+		1F6C64D96D3FF33D8C82D562 /* Pods_TO_DO_APPTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TO_DO_APPTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6025413F1F2F3A420004FDC7 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		605234541F3171420005BD21 /* TaskModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
 		606505B61F2EB5E500134495 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
@@ -90,23 +91,22 @@
 		60F1CDED1F30292E00821553 /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 		60F1CDEF1F304E5500821553 /* TimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeViewController.swift; sourceTree = "<group>"; };
 		60F1CDF11F305F4C00821553 /* RepeatTimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepeatTimeViewController.swift; sourceTree = "<group>"; };
-		D54EB08F1F302D1E0038C9A3 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		D569ABB11F30624D00AAA76F /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		D588CE601F34666700DD63BB /* AppData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
-		D5A092101F32ADF500BF00D7 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		D5A092121F32AE0200BF00D7 /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
-		D5DBF1021F3329CD004FFEE6 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		B1184DCFF811A302B1EC3E66 /* Pods-TO-DO-APPUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TO-DO-APPUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TO-DO-APPUITests/Pods-TO-DO-APPUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		B43FBE5F6456B56E552CE86C /* Pods_TO_DO_APP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TO_DO_APP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D15C947137E21B7EE93898AB /* Pods-TO-DO-APP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TO-DO-APP.release.xcconfig"; path = "Pods/Target Support Files/Pods-TO-DO-APP/Pods-TO-DO-APP.release.xcconfig"; sourceTree = "<group>"; };
-		F943B58189B77BCC5BD79DC5 /* Pods-TO-DO-APPUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TO-DO-APPUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TO-DO-APPUITests/Pods-TO-DO-APPUITests.release.xcconfig"; sourceTree = "<group>"; };
-		F9DDEC53C00124F4FE23C81F /* Pods_TO_DO_APPTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TO_DO_APPTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		673E1AE651573E93C1338011 /* Pods_TO_DO_APPUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TO_DO_APPUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		71FA3D06DB6082A2B6BD1FB0 /* Pods-TO-DO-APP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TO-DO-APP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TO-DO-APP/Pods-TO-DO-APP.debug.xcconfig"; sourceTree = "<group>"; };
 		8FEE961382FD305D9F12C445 /* Pods-TO-DO-APPUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TO-DO-APPUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TO-DO-APPUITests/Pods-TO-DO-APPUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A2835DEE820796CB9537BA05 /* Pods_TO_DO_APP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TO_DO_APP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C00EC51EDEB4363CCD8C2488 /* Pods-TO-DO-APPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TO-DO-APPTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TO-DO-APPTests/Pods-TO-DO-APPTests.release.xcconfig"; sourceTree = "<group>"; };
 		D111CA10090596D314E28398 /* Pods-TO-DO-APP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TO-DO-APP.release.xcconfig"; path = "Pods/Target Support Files/Pods-TO-DO-APP/Pods-TO-DO-APP.release.xcconfig"; sourceTree = "<group>"; };
 		D51AF1721F3409B500177854 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		D54EB08F1F302D1E0038C9A3 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		D5617C581F3B2027008BC07C /* UserProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProgressViewController.swift; sourceTree = "<group>"; };
+		D5617C591F3B2027008BC07C /* UserProgressViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserProgressViewController.xib; sourceTree = "<group>"; };
+		D569ABB11F30624D00AAA76F /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		D588CE601F34666700DD63BB /* AppData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
+		D5A092101F32ADF500BF00D7 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		D5A092121F32AE0200BF00D7 /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		D5DBF1021F3329CD004FFEE6 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D6DE3ADD68E10C6DD61F44C2 /* Pods-TO-DO-APPUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TO-DO-APPUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TO-DO-APPUITests/Pods-TO-DO-APPUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F2E675270B327B585D731956 /* Pods-TO-DO-APPTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TO-DO-APPTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TO-DO-APPTests/Pods-TO-DO-APPTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,7 +123,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F10712EA52D5601FBD7E82B /* Pods_TO_DO_APPTests.framework in Frameworks */,
+				3F10712EA52D5601FBD7E82B /* BuildFile in Frameworks */,
+				839B9C0E4726AEDFB5D56642 /* Pods_TO_DO_APPTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,12 +142,12 @@
 		269CFD915E1FD17CE00D43DD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4899F5BA74C318A93F2B4BE4 /* Pods-TO-DO-APP.debug.xcconfig */,
 				D111CA10090596D314E28398 /* Pods-TO-DO-APP.release.xcconfig */,
 				F2E675270B327B585D731956 /* Pods-TO-DO-APPTests.debug.xcconfig */,
 				C00EC51EDEB4363CCD8C2488 /* Pods-TO-DO-APPTests.release.xcconfig */,
 				8FEE961382FD305D9F12C445 /* Pods-TO-DO-APPUITests.debug.xcconfig */,
-				44D37841448285390FAECFD6 /* Pods-TO-DO-APPUITests.release.xcconfig */,
+				71FA3D06DB6082A2B6BD1FB0 /* Pods-TO-DO-APP.debug.xcconfig */,
+				D6DE3ADD68E10C6DD61F44C2 /* Pods-TO-DO-APPUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -155,8 +156,8 @@
 			isa = PBXGroup;
 			children = (
 				A2835DEE820796CB9537BA05 /* Pods_TO_DO_APP.framework */,
-				09470E5CD56A18311DB916A0 /* Pods_TO_DO_APPTests.framework */,
 				673E1AE651573E93C1338011 /* Pods_TO_DO_APPUITests.framework */,
+				1F6C64D96D3FF33D8C82D562 /* Pods_TO_DO_APPTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -224,6 +225,8 @@
 				60DB5B5F1F3857E800220B8F /* PageMenuCollectionViewCell.swift */,
 				60DC7E681F39746200A52EBA /* CalculateUtility.swift */,
 				D51AF1721F3409B500177854 /* CalendarViewController.swift */,
+				D5617C581F3B2027008BC07C /* UserProgressViewController.swift */,
+				D5617C591F3B2027008BC07C /* UserProgressViewController.xib */,
 			);
 			path = "TO-DO-APP";
 			sourceTree = "<group>";
@@ -244,19 +247,6 @@
 				60B2FEC81F2BA69C00A6185F /* Info.plist */,
 			);
 			path = "TO-DO-APPUITests";
-			sourceTree = "<group>";
-		};
-		BF41AD2186A002FB89CE5A54 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				6D07BB3162808D7F32A613D2 /* Pods-TO-DO-APP.debug.xcconfig */,
-				D15C947137E21B7EE93898AB /* Pods-TO-DO-APP.release.xcconfig */,
-				78D91D23B52F0C7E5145211A /* Pods-TO-DO-APPTests.debug.xcconfig */,
-				E81185FFC9D31B3614327FAD /* Pods-TO-DO-APPTests.release.xcconfig */,
-				B1184DCFF811A302B1EC3E66 /* Pods-TO-DO-APPUITests.debug.xcconfig */,
-				F943B58189B77BCC5BD79DC5 /* Pods-TO-DO-APPUITests.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -376,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				60B2FEB11F2BA69C00A6185F /* LaunchScreen.storyboard in Resources */,
+				D5617C5B1F3B2027008BC07C /* UserProgressViewController.xib in Resources */,
 				60B2FEAE1F2BA69C00A6185F /* Assets.xcassets in Resources */,
 				60B2FEAC1F2BA69C00A6185F /* Main.storyboard in Resources */,
 			);
@@ -549,6 +540,7 @@
 				605234551F3171420005BD21 /* TaskModel.swift in Sources */,
 				60DC7E691F39746200A52EBA /* CalculateUtility.swift in Sources */,
 				60DB5B601F3857E800220B8F /* PageMenuCollectionViewCell.swift in Sources */,
+				D5617C5A1F3B2027008BC07C /* UserProgressViewController.swift in Sources */,
 				60F1CDF21F305F4C00821553 /* RepeatTimeViewController.swift in Sources */,
 				D5A092111F32ADF500BF00D7 /* ProfileViewController.swift in Sources */,
 				607750B71F2B1B0B00DB1CAF /* SignUpViewController.swift in Sources */,
@@ -715,7 +707,7 @@
 		};
 		60B2FECC1F2BA69C00A6185F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4899F5BA74C318A93F2B4BE4 /* Pods-TO-DO-APP.debug.xcconfig */;
+			baseConfigurationReference = 71FA3D06DB6082A2B6BD1FB0 /* Pods-TO-DO-APP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "TO-DO-APP/Info.plist";
@@ -785,7 +777,7 @@
 		};
 		60B2FED31F2BA69C00A6185F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 44D37841448285390FAECFD6 /* Pods-TO-DO-APPUITests.release.xcconfig */;
+			baseConfigurationReference = D6DE3ADD68E10C6DD61F44C2 /* Pods-TO-DO-APPUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = "TO-DO-APPUITests/Info.plist";
