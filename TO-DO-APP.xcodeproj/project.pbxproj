@@ -16,6 +16,8 @@
 		606505BE1F2ED7ED00134495 /* CommonUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606505BD1F2ED7ED00134495 /* CommonUtility.swift */; };
 		606505C01F2EDC8600134495 /* KeychainSwiftDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606505BF1F2EDC8600134495 /* KeychainSwiftDistrib.swift */; };
 		607750B71F2B1B0B00DB1CAF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607750B61F2B1B0B00DB1CAF /* SignUpViewController.swift */; };
+		6077CF061F3B2348005E3292 /* TimelineCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6077CF041F3B2348005E3292 /* TimelineCollectionViewCell.swift */; };
+		6077CF071F3B2348005E3292 /* TimelineCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6077CF051F3B2348005E3292 /* TimelineCollectionViewCell.xib */; };
 		6079123C1F330FBA008D5058 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6079123B1F330FBA008D5058 /* MainViewController.swift */; };
 		607912401F331391008D5058 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6079123F1F331391008D5058 /* TaskTableViewCell.swift */; };
 		60B2FEA71F2BA69B00A6185F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B2FEA61F2BA69B00A6185F /* AppDelegate.swift */; };
@@ -28,6 +30,8 @@
 		60DB5B5E1F3855A600220B8F /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DB5B5D1F3855A600220B8F /* OverviewViewController.swift */; };
 		60DB5B601F3857E800220B8F /* PageMenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DB5B5F1F3857E800220B8F /* PageMenuCollectionViewCell.swift */; };
 		60DC7E691F39746200A52EBA /* CalculateUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DC7E681F39746200A52EBA /* CalculateUtility.swift */; };
+		60EBF2E01F3AE90C0093F531 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EBF2DE1F3AE90C0093F531 /* TimelineViewController.swift */; };
+		60EBF2E11F3AE90C0093F531 /* TimelineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60EBF2DF1F3AE90C0093F531 /* TimelineViewController.xib */; };
 		60F1CDEC1F3018A400821553 /* CreateTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F1CDEB1F3018A400821553 /* CreateTaskViewController.swift */; };
 		60F1CDEE1F30292E00821553 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F1CDED1F30292E00821553 /* DatePickerViewController.swift */; };
 		60F1CDF01F304E5500821553 /* TimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F1CDEF1F304E5500821553 /* TimeViewController.swift */; };
@@ -69,6 +73,8 @@
 		606505BD1F2ED7ED00134495 /* CommonUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonUtility.swift; sourceTree = "<group>"; };
 		606505BF1F2EDC8600134495 /* KeychainSwiftDistrib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainSwiftDistrib.swift; sourceTree = "<group>"; };
 		607750B61F2B1B0B00DB1CAF /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; tabWidth = 4; };
+		6077CF041F3B2348005E3292 /* TimelineCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineCollectionViewCell.swift; sourceTree = "<group>"; };
+		6077CF051F3B2348005E3292 /* TimelineCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimelineCollectionViewCell.xib; sourceTree = "<group>"; };
 		6079123B1F330FBA008D5058 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		6079123F1F331391008D5058 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 		60B2FEA31F2BA69B00A6185F /* TO-DO-APP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TO-DO-APP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +93,8 @@
 		60DB5B5D1F3855A600220B8F /* OverviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
 		60DB5B5F1F3857E800220B8F /* PageMenuCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageMenuCollectionViewCell.swift; sourceTree = "<group>"; };
 		60DC7E681F39746200A52EBA /* CalculateUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculateUtility.swift; sourceTree = "<group>"; };
+		60EBF2DE1F3AE90C0093F531 /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
+		60EBF2DF1F3AE90C0093F531 /* TimelineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimelineViewController.xib; sourceTree = "<group>"; };
 		60F1CDEB1F3018A400821553 /* CreateTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTaskViewController.swift; sourceTree = "<group>"; };
 		60F1CDED1F30292E00821553 /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 		60F1CDEF1F304E5500821553 /* TimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeViewController.swift; sourceTree = "<group>"; };
@@ -227,6 +235,10 @@
 				D51AF1721F3409B500177854 /* CalendarViewController.swift */,
 				D5617C581F3B2027008BC07C /* UserProgressViewController.swift */,
 				D5617C591F3B2027008BC07C /* UserProgressViewController.xib */,
+				60EBF2DE1F3AE90C0093F531 /* TimelineViewController.swift */,
+				60EBF2DF1F3AE90C0093F531 /* TimelineViewController.xib */,
+				6077CF041F3B2348005E3292 /* TimelineCollectionViewCell.swift */,
+				6077CF051F3B2348005E3292 /* TimelineCollectionViewCell.xib */,
 			);
 			path = "TO-DO-APP";
 			sourceTree = "<group>";
@@ -367,6 +379,8 @@
 			files = (
 				60B2FEB11F2BA69C00A6185F /* LaunchScreen.storyboard in Resources */,
 				D5617C5B1F3B2027008BC07C /* UserProgressViewController.xib in Resources */,
+				60EBF2E11F3AE90C0093F531 /* TimelineViewController.xib in Resources */,
+				6077CF071F3B2348005E3292 /* TimelineCollectionViewCell.xib in Resources */,
 				60B2FEAE1F2BA69C00A6185F /* Assets.xcassets in Resources */,
 				60B2FEAC1F2BA69C00A6185F /* Main.storyboard in Resources */,
 			);
@@ -536,8 +550,10 @@
 				60DB5B5E1F3855A600220B8F /* OverviewViewController.swift in Sources */,
 				6079123C1F330FBA008D5058 /* MainViewController.swift in Sources */,
 				60F1CDF01F304E5500821553 /* TimeViewController.swift in Sources */,
+				60EBF2E01F3AE90C0093F531 /* TimelineViewController.swift in Sources */,
 				602541401F2F3A420004FDC7 /* Model.xcdatamodeld in Sources */,
 				605234551F3171420005BD21 /* TaskModel.swift in Sources */,
+				6077CF061F3B2348005E3292 /* TimelineCollectionViewCell.swift in Sources */,
 				60DC7E691F39746200A52EBA /* CalculateUtility.swift in Sources */,
 				60DB5B601F3857E800220B8F /* PageMenuCollectionViewCell.swift in Sources */,
 				D5617C5A1F3B2027008BC07C /* UserProgressViewController.swift in Sources */,

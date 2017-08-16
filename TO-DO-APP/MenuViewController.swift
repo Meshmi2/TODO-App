@@ -11,7 +11,11 @@ import UIKit
 class MenuViewController: UIViewController {
     let userDefault = UserDefaults()
     @IBAction func onButtonCloseClicked(_ sender: Any) {
-        
+        self.dismiss(animated: true, completion: nil)
+    }
+    @IBAction func buttonSwitchTimeline(_ sender: Any) {
+        let timelineView = TimelineViewController(nibName: "TimelineViewController", bundle: nil)
+        navigationController?.pushViewController(timelineView, animated: true)
     }
     
     @IBAction func onButtonLogoutClicked(_ sender: Any) {
@@ -20,12 +24,9 @@ class MenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }

@@ -24,9 +24,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         labelDayName.text = CommonUtility.getDayName()
         labelWelcome.text = CommonUtility.getDayInTheDay()
 
-        let shared = DatabaseManager.shared
-        shared.connectTable("Task")
-        if let tasks = shared.fetchDataFromTable() as? [Task] {
+        if let tasks = DatabaseManager.shared.fetchDataFromTable() as? [Task] {
             arrTasks.append(contentsOf: tasks)
         }
     }

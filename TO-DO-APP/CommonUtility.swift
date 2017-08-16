@@ -53,6 +53,25 @@ final class CommonUtility {
         return dateFormatter.string(from: date)
     }
 
+    static func getDayName(_ date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE"
+        return dateFormatter.string(from: date)
+    }
+
+    static func getNumberDay(_ date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd"
+        return dateFormatter.string(from: date)
+    }
+
+    static func getMonthInYear(_ date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeStyle = .none
+        dateFormatter.dateFormat = "MMMM, yyyy"
+        return dateFormatter.string(from: date)
+    }
+
     static func getDayInTheDay() -> String {
         let date = Date()
         let calendar = Calendar.current

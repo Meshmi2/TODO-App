@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="TimelineCollectionViewCell" customModule="TO_DO_APP" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="352" height="96"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="352" height="96"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New icons" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vYa-Sd-kGe">
+                        <rect key="frame" x="168" y="0.0" width="184" height="38"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="38" id="3h8-mT-RmV"/>
+                            <constraint firstAttribute="width" constant="184" id="ttZ-EZ-b6U"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="track" translatesAutoresizingMaskIntoConstraints="NO" id="fnj-iV-MPq">
+                        <rect key="frame" x="0.0" y="0.0" width="76" height="96"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="76" id="QRq-Ou-E3k"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="overdue" translatesAutoresizingMaskIntoConstraints="NO" id="MU6-mu-JzZ">
+                        <rect key="frame" x="0.0" y="0.0" width="76" height="96"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="76" id="IPX-Az-icn"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="11 - 12pm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L0N-FH-rWw">
+                        <rect key="frame" x="52" y="38" width="108" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="9"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mobile app" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ezr-D3-LQd">
+                        <rect key="frame" x="175" y="38" width="177" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="177" id="7yF-r2-njW"/>
+                            <constraint firstAttribute="height" constant="12" id="c3b-Hg-mY9"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="10"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Ezr-D3-LQd" secondAttribute="trailing" id="2w5-ma-OEw"/>
+                <constraint firstItem="MU6-mu-JzZ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="De6-Nk-GjS"/>
+                <constraint firstItem="fnj-iV-MPq" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="FQd-Xn-Rst"/>
+                <constraint firstItem="Ezr-D3-LQd" firstAttribute="top" secondItem="vYa-Sd-kGe" secondAttribute="bottom" id="Jb0-Mu-nlb"/>
+                <constraint firstItem="Ezr-D3-LQd" firstAttribute="top" secondItem="vYa-Sd-kGe" secondAttribute="bottom" id="dvR-AL-uvq"/>
+                <constraint firstAttribute="bottom" secondItem="fnj-iV-MPq" secondAttribute="bottom" id="k0T-bh-R8H"/>
+                <constraint firstItem="MU6-mu-JzZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="mah-KP-JJQ"/>
+                <constraint firstItem="vYa-Sd-kGe" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="mdc-E0-PiC"/>
+                <constraint firstAttribute="trailing" secondItem="vYa-Sd-kGe" secondAttribute="trailing" id="nL4-AR-c0P"/>
+                <constraint firstItem="fnj-iV-MPq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ubd-lu-rRJ"/>
+                <constraint firstAttribute="bottom" secondItem="MU6-mu-JzZ" secondAttribute="bottom" id="xLt-SK-a4k"/>
+            </constraints>
+            <size key="customSize" width="352" height="96"/>
+            <connections>
+                <outlet property="pointColorImageView" destination="MU6-mu-JzZ" id="ng0-X5-NMV"/>
+                <outlet property="taskDescriptionLabel" destination="Ezr-D3-LQd" id="Ksx-xt-SSM"/>
+                <outlet property="taskTimeLabel" destination="L0N-FH-rWw" id="iPV-ig-Kcc"/>
+                <outlet property="taskTitleLabel" destination="vYa-Sd-kGe" id="TC6-XB-lJU"/>
+            </connections>
+            <point key="canvasLocation" x="-387" y="-90"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="overdue" width="13" height="13"/>
+        <image name="track" width="1" height="403"/>
+    </resources>
+</document>

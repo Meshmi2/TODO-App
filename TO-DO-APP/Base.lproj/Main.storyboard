@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Rom-5h-pbZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -629,7 +629,7 @@
                                 <state key="normal" backgroundImage="icon_menu"/>
                                 <connections>
                                     <action selector="buttonCancelCreateTask:" destination="i3o-aI-bqX" eventType="touchUpInside" id="l7q-XK-nAf"/>
-                                    <segue destination="TJV-Rq-hYh" kind="modal" id="N1N-3R-c0V"/>
+                                    <segue destination="1qR-d1-MkI" kind="modal" id="N1N-3R-c0V"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2LH-WD-QHE">
@@ -678,7 +678,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nGo-gn-IIG" id="Jam-Lb-4Jf">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="emC-GU-2Fx">
@@ -903,7 +903,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fuz-hh-wcU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2119" y="814"/>
+            <point key="canvasLocation" x="3056.8000000000002" y="813.64317841079469"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="bgH-fD-fWL">
@@ -918,7 +918,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroud_button" translatesAutoresizingMaskIntoConstraints="NO" id="HhC-EL-K0o">
-                                <rect key="frame" x="-4" y="20" width="379" height="647"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9os-eP-dBP">
@@ -1061,6 +1061,9 @@
                                 <state key="normal" title="Timeline">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonSwitchTimeline:" destination="TJV-Rq-hYh" eventType="touchUpInside" id="niE-1r-pnA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4y1-i0-kxn">
                                 <rect key="frame" x="93" y="593" width="51" height="32"/>
@@ -1094,6 +1097,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="mnn-vQ-nMS"/>
                     <connections>
                         <segue destination="0Te-rt-I0d" kind="unwind" identifier="unwindToSignIn" unwindAction="unwindToSignInSegue:" id="IOb-zE-xWh"/>
                     </connections>
@@ -1101,7 +1105,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ceI-vO-vxn" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="0Te-rt-I0d" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1100" y="1091.6041979010495"/>
+            <point key="canvasLocation" x="2039.2" y="1091.6041979010495"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="5FI-qZ-cpH">
@@ -1151,7 +1155,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="icon_menu"/>
                                 <connections>
-                                    <segue destination="TJV-Rq-hYh" kind="modal" id="cNt-yL-f5O"/>
+                                    <segue destination="1qR-d1-MkI" kind="modal" id="cNt-yL-f5O"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B49-db-f9q">
@@ -1323,7 +1327,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="icon_menu"/>
                                 <connections>
-                                    <segue destination="TJV-Rq-hYh" kind="show" id="vMl-wO-qqN"/>
+                                    <segue destination="1qR-d1-MkI" kind="show" id="vMl-wO-qqN"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T8Q-Af-7J9">
@@ -1724,6 +1728,24 @@
             </objects>
             <point key="canvasLocation" x="2842" y="877"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NjD-3c-0yE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1qR-d1-MkI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="llW-3e-sz5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="TJV-Rq-hYh" kind="relationship" relationship="rootViewController" id="20C-Gh-NrK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1qN-ws-cPd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1100" y="1091.6041979010495"/>
+        </scene>
     </scenes>
     <resources>
         <image name="active" width="189" height="3"/>
@@ -1766,8 +1788,9 @@
         <image name="user_name" width="102" height="19"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Uv7-WK-tIQ"/>
-        <segue reference="cff-Js-2tb"/>
+        <segue reference="vMl-wO-qqN"/>
+        <segue reference="yUj-5I-jvE"/>
+        <segue reference="cI5-1C-zkb"/>
         <segue reference="eoc-VD-ajX"/>
     </inferredMetricsTieBreakers>
 </document>

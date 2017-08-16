@@ -37,12 +37,11 @@ class OverviewViewController: UIViewController, UICollectionViewDataSource, UICo
         super.viewDidLoad()
         collectView.dataSource = self
         collectView.delegate = self
-        shared.connectTable("Task")
         let month = CommonUtility.getCurrenMonth()
         if let monthSelected = Int(month) {
             self.monthSelected = monthSelected
         }
-        listTasks = shared.fetchDataWithQuery(month) as? [Task]
+        listTasks = DatabaseManager.shared.fetchDataWithQuery(month) as? [Task]
         setDefaultCircleView(listTasks)
         setValueCircleView()
     }
@@ -75,7 +74,7 @@ class OverviewViewController: UIViewController, UICollectionViewDataSource, UICo
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let index = indexPath.row + 1
-        listTasks = shared.fetchDataWithQuery(String(index)) as? [Task]
+        listTasks = DatabaseManager.shared.fetchDataWithQuery(String(index)) as? [Task]
         setDefaultCircleView(listTasks)
         monthSelected = index
         setValueCircleView()
