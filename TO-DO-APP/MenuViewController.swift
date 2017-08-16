@@ -27,6 +27,10 @@ class MenuViewController: UIViewController {
         performSegue(withIdentifier: "unwindToSignIn", sender: self)
     }
     
+    @IBAction func onSwitchListsClicked(_ sender: Any) {
+        let autoView = AutoViewController(nibName: "AutoViewController", bundle: nil)
+        navigationController?.pushViewController(autoView, animated: true)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
     }

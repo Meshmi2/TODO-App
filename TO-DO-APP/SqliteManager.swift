@@ -74,4 +74,22 @@ class SqliteManager {
         }
         return result
     }
+    
+    func findTaskByGroup() -> [[String : Any]] {
+        var listTask = [[String : Any]]()
+        guard let db = self.db else {return []}
+        do {
+            let tasks = try db.prepare("select * from task where task.group_id = 1")
+            for row in tasks {
+                var dictionaryTask = [String:Any]()
+                for (index, name) in tasks.columnNames.enumerated() {
+                    dictionaryTask[name] = row[index]
+                }
+                listTask.append(dictionaryTask)
+            }
+        } catch {
+            return []
+        }
+        return listTask
+    }
 }

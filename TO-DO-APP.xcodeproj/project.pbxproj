@@ -44,6 +44,10 @@
 		60F1CDF01F304E5500821553 /* TimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F1CDEF1F304E5500821553 /* TimeViewController.swift */; };
 		60F1CDF21F305F4C00821553 /* RepeatTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F1CDF11F305F4C00821553 /* RepeatTimeViewController.swift */; };
 		839B9C0E4726AEDFB5D56642 /* Pods_TO_DO_APPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F6C64D96D3FF33D8C82D562 /* Pods_TO_DO_APPTests.framework */; };
+		D50AE6CC1F4429C900D6EA15 /* AutoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50AE6CA1F4429C900D6EA15 /* AutoViewController.swift */; };
+		D50AE6CD1F4429C900D6EA15 /* AutoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D50AE6CB1F4429C900D6EA15 /* AutoViewController.xib */; };
+		D50AE6D01F442B7C00D6EA15 /* AutoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50AE6CE1F442B7C00D6EA15 /* AutoTableViewCell.swift */; };
+		D50AE6D11F442B7C00D6EA15 /* AutoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D50AE6CF1F442B7C00D6EA15 /* AutoTableViewCell.xib */; };
 		D51AF1731F3409B500177854 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51AF1721F3409B500177854 /* CalendarViewController.swift */; };
 		D54EB0901F302D1E0038C9A3 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54EB08F1F302D1E0038C9A3 /* MenuViewController.swift */; };
 		D5617C5A1F3B2027008BC07C /* UserProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5617C581F3B2027008BC07C /* UserProgressViewController.swift */; };
@@ -119,6 +123,10 @@
 		A2835DEE820796CB9537BA05 /* Pods_TO_DO_APP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TO_DO_APP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C00EC51EDEB4363CCD8C2488 /* Pods-TO-DO-APPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TO-DO-APPTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TO-DO-APPTests/Pods-TO-DO-APPTests.release.xcconfig"; sourceTree = "<group>"; };
 		D111CA10090596D314E28398 /* Pods-TO-DO-APP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TO-DO-APP.release.xcconfig"; path = "Pods/Target Support Files/Pods-TO-DO-APP/Pods-TO-DO-APP.release.xcconfig"; sourceTree = "<group>"; };
+		D50AE6CA1F4429C900D6EA15 /* AutoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoViewController.swift; sourceTree = "<group>"; };
+		D50AE6CB1F4429C900D6EA15 /* AutoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutoViewController.xib; sourceTree = "<group>"; };
+		D50AE6CE1F442B7C00D6EA15 /* AutoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoTableViewCell.swift; sourceTree = "<group>"; };
+		D50AE6CF1F442B7C00D6EA15 /* AutoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutoTableViewCell.xib; sourceTree = "<group>"; };
 		D51AF1721F3409B500177854 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		D54EB08F1F302D1E0038C9A3 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		D5617C581F3B2027008BC07C /* UserProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProgressViewController.swift; sourceTree = "<group>"; };
@@ -260,6 +268,10 @@
 				60E7E67C1F4425FA002EA542 /* GroupViewController.xib */,
 				60E7E67F1F44319A002EA542 /* GroupTableViewCell.swift */,
 				60E7E6801F44319A002EA542 /* GroupTableViewCell.xib */,
+				D50AE6CA1F4429C900D6EA15 /* AutoViewController.swift */,
+				D50AE6CB1F4429C900D6EA15 /* AutoViewController.xib */,
+				D50AE6CE1F442B7C00D6EA15 /* AutoTableViewCell.swift */,
+				D50AE6CF1F442B7C00D6EA15 /* AutoTableViewCell.xib */,
 			);
 			path = "TO-DO-APP";
 			sourceTree = "<group>";
@@ -400,11 +412,13 @@
 			files = (
 				60B2FEB11F2BA69C00A6185F /* LaunchScreen.storyboard in Resources */,
 				D5617C5B1F3B2027008BC07C /* UserProgressViewController.xib in Resources */,
+				D50AE6D11F442B7C00D6EA15 /* AutoTableViewCell.xib in Resources */,
 				60EBF2E11F3AE90C0093F531 /* TimelineViewController.xib in Resources */,
 				602DFC6F1F468FAE0045E9B2 /* db.sqlite3 in Resources */,
 				60E7E67E1F4425FA002EA542 /* GroupViewController.xib in Resources */,
 				6077CF071F3B2348005E3292 /* TimelineCollectionViewCell.xib in Resources */,
 				60B2FEAE1F2BA69C00A6185F /* Assets.xcassets in Resources */,
+				D50AE6CD1F4429C900D6EA15 /* AutoViewController.xib in Resources */,
 				60B2FEAC1F2BA69C00A6185F /* Main.storyboard in Resources */,
 				60E7E6821F44319A002EA542 /* GroupTableViewCell.xib in Resources */,
 			);
@@ -575,6 +589,7 @@
 				60E7E6841F444245002EA542 /* Group.swift in Sources */,
 				6079123C1F330FBA008D5058 /* MainViewController.swift in Sources */,
 				60F1CDF01F304E5500821553 /* TimeViewController.swift in Sources */,
+				D50AE6D01F442B7C00D6EA15 /* AutoTableViewCell.swift in Sources */,
 				60EBF2E01F3AE90C0093F531 /* TimelineViewController.swift in Sources */,
 				602541401F2F3A420004FDC7 /* Model.xcdatamodeld in Sources */,
 				605234551F3171420005BD21 /* TaskModel.swift in Sources */,
@@ -600,6 +615,7 @@
 				60F1CDEC1F3018A400821553 /* CreateTaskViewController.swift in Sources */,
 				D569ABB21F30624D00AAA76F /* SettingsViewController.swift in Sources */,
 				D588CE611F34666700DD63BB /* AppData.swift in Sources */,
+				D50AE6CC1F4429C900D6EA15 /* AutoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

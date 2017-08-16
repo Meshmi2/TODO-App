@@ -247,7 +247,7 @@
         <!--Create Task View Controller-->
         <scene sceneID="sjx-g0-xde">
             <objects>
-                <viewController storyboardIdentifier="ScreenCreateTask" id="i3o-aI-bqX" customClass="CreateTaskViewController" customModule="TO_DO_APP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScreenCreateTask" useStoryboardIdentifierAsRestorationIdentifier="YES" id="i3o-aI-bqX" customClass="CreateTaskViewController" customModule="TO_DO_APP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QjU-l5-WqD"/>
                         <viewControllerLayoutGuide type="bottom" id="sBJ-Vz-dyE"/>
@@ -1048,6 +1048,9 @@
                                 <state key="normal" title="Lists">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onSwitchListsClicked:" destination="TJV-Rq-hYh" eventType="touchUpInside" id="9eL-qh-lWa"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="amH-oU-1hj">
                                 <rect key="frame" x="91" y="484" width="41" height="32"/>
@@ -1795,5 +1798,9 @@
         <segue reference="vMl-wO-qqN"/>
         <segue reference="20C-Gh-NrK"/>
         <segue reference="cI5-1C-zkb"/>
+        <segue reference="cff-Js-2tb"/>
+        <segue reference="eoc-VD-ajX"/>
+        <segue reference="cI5-1C-zkb"/>
+        <segue reference="vMl-wO-qqN"/>
     </inferredMetricsTieBreakers>
 </document>
