@@ -56,6 +56,7 @@ class SignInViewController: UIViewController {
             AppData.shared.loadUserInfo()
         }
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         

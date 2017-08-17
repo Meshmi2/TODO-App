@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GroupViewController" customModule="TO_DO_APP" customModuleProvider="target">
+            <connections>
+                <outlet property="archivedBottomImage" destination="63C-BL-zGk" id="kjh-bq-BoA"/>
+                <outlet property="latestBottomImage" destination="Hsf-Lu-oDp" id="6hy-UJ-oC2"/>
+                <outlet property="listGroupTableView" destination="aes-up-E3D" id="6Yh-SW-mTW"/>
+                <outlet property="popularBottomImage" destination="ETu-Kq-TjQ" id="8jR-5u-ejE"/>
+                <outlet property="popularButton" destination="DJi-RN-AYo" id="toG-Hk-Ueh"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aes-up-E3D">
+                    <rect key="frame" x="0.0" y="55" width="414" height="681"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroud_button" translatesAutoresizingMaskIntoConstraints="NO" id="JKf-6n-KVy">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="1MU-Ro-JIa"/>
+                        <constraint firstAttribute="width" constant="414" id="X4Y-99-fDQ"/>
+                    </constraints>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="wuz-La-zA2">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eN9-rg-NCP">
+                            <rect key="frame" x="0.0" y="0.0" width="138" height="55"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DJi-RN-AYo">
+                                    <rect key="frame" x="0.0" y="0.0" width="138" height="51"/>
+                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                    <state key="normal" title="POPULAR">
+                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="popularButtonClicked:" destination="-1" eventType="touchUpInside" id="Eys-c7-snb"/>
+                                    </connections>
+                                </button>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ETu-Kq-TjQ">
+                                    <rect key="frame" x="0.0" y="51" width="138" height="4"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="4" id="g6c-26-cJB"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4qe-ue-2fS">
+                            <rect key="frame" x="138" y="0.0" width="138" height="55"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x97-rl-gsq">
+                                    <rect key="frame" x="0.0" y="0.0" width="138" height="51"/>
+                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                    <state key="normal" title="LASTEST">
+                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="latestButtonClicked:" destination="-1" eventType="touchUpInside" id="Icl-Fy-CMf"/>
+                                    </connections>
+                                </button>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hsf-Lu-oDp">
+                                    <rect key="frame" x="0.0" y="51" width="138" height="4"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="4" id="Pct-pU-dpX"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WbP-2T-Rhl">
+                            <rect key="frame" x="276" y="0.0" width="138" height="55"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KsT-vW-1Ls">
+                                    <rect key="frame" x="0.0" y="0.0" width="138" height="51"/>
+                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                    <state key="normal" title="ARCHIVED">
+                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="archivedButtonClicked:" destination="-1" eventType="touchUpInside" id="vkZ-va-sMW"/>
+                                    </connections>
+                                </button>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="63C-BL-zGk">
+                                    <rect key="frame" x="0.0" y="51" width="138" height="4"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="4" id="Xtb-rd-u57"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="aes-up-E3D" secondAttribute="trailing" id="76f-04-Q56"/>
+                <constraint firstItem="wuz-La-zA2" firstAttribute="width" secondItem="JKf-6n-KVy" secondAttribute="width" id="ABM-VM-dsi"/>
+                <constraint firstItem="aes-up-E3D" firstAttribute="top" secondItem="JKf-6n-KVy" secondAttribute="bottom" id="BvJ-D2-tSm"/>
+                <constraint firstItem="aes-up-E3D" firstAttribute="top" secondItem="wuz-La-zA2" secondAttribute="bottom" id="CcI-Zn-htq"/>
+                <constraint firstItem="JKf-6n-KVy" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="L0z-lD-sDP"/>
+                <constraint firstAttribute="trailing" secondItem="wuz-La-zA2" secondAttribute="trailing" id="LTw-c5-w8o"/>
+                <constraint firstItem="aes-up-E3D" firstAttribute="top" secondItem="wuz-La-zA2" secondAttribute="bottom" id="QQo-p7-uci"/>
+                <constraint firstAttribute="bottom" secondItem="aes-up-E3D" secondAttribute="bottom" id="cun-HS-nD7"/>
+                <constraint firstItem="wuz-La-zA2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="d8o-Zu-n4W"/>
+                <constraint firstAttribute="trailing" secondItem="JKf-6n-KVy" secondAttribute="trailing" id="g4o-pd-dfq"/>
+                <constraint firstItem="aes-up-E3D" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="lIN-oy-yH6"/>
+                <constraint firstItem="aes-up-E3D" firstAttribute="top" secondItem="JKf-6n-KVy" secondAttribute="bottom" id="lvE-v0-Jus"/>
+                <constraint firstItem="wuz-La-zA2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="n07-bi-Xuc"/>
+                <constraint firstItem="JKf-6n-KVy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="uob-la-hrM"/>
+                <constraint firstItem="aes-up-E3D" firstAttribute="top" secondItem="JKf-6n-KVy" secondAttribute="bottom" id="vrj-u0-uZ9"/>
+            </constraints>
+            <point key="canvasLocation" x="-548" y="-169"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="backgroud_button" width="325" height="55"/>
+    </resources>
+</document>

@@ -1037,6 +1037,9 @@
                                 <state key="normal" title="Groups">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="switchGroupButton:" destination="TJV-Rq-hYh" eventType="touchUpInside" id="Voa-id-tRA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="51o-QI-KT7">
                                 <rect key="frame" x="85" y="430" width="41" height="32"/>
@@ -1788,9 +1791,9 @@
         <image name="user_name" width="102" height="19"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="vMl-wO-qqN"/>
         <segue reference="yUj-5I-jvE"/>
+        <segue reference="vMl-wO-qqN"/>
+        <segue reference="20C-Gh-NrK"/>
         <segue reference="cI5-1C-zkb"/>
-        <segue reference="eoc-VD-ajX"/>
     </inferredMetricsTieBreakers>
 </document>
