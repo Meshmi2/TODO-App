@@ -6,6 +6,7 @@ target 'TO-DO-APP' do
   use_frameworks!
 	pod 'UICircularProgressRing'
 	pod 'FSCalendar'
+    pod 'SQLite.swift', '~> 0.11.3'
   # Pods for TO-DO-APP
 
   target 'TO-DO-APPTests' do

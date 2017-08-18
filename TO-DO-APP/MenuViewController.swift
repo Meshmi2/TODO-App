@@ -13,8 +13,13 @@ class MenuViewController: UIViewController {
     @IBAction func onButtonCloseClicked(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+
     @IBAction func buttonSwitchTimeline(_ sender: Any) {
         let timelineView = TimelineViewController(nibName: "TimelineViewController", bundle: nil)
+        navigationController?.pushViewController(timelineView, animated: true)
+    }
+    @IBAction func switchGroupButton(_ sender: Any) {
+        let timelineView = GroupViewController(nibName: "GroupViewController", bundle: nil)
         navigationController?.pushViewController(timelineView, animated: true)
     }
     

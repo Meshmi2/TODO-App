@@ -1,15 +1,20 @@
 PODS:
   - FSCalendar (2.7.9)
+  - SQLite.swift (0.11.3):
+    - SQLite.swift/standard (= 0.11.3)
+  - SQLite.swift/standard (0.11.3)
   - UICircularProgressRing (1.7.0)
 
 DEPENDENCIES:
   - FSCalendar
+  - SQLite.swift (~> 0.11.3)
   - UICircularProgressRing
 
 SPEC CHECKSUMS:
   FSCalendar: a04b09f16f811bc92e82f3cf852a15225233b9d5
+  SQLite.swift: 99b36c22084427f0abbeb957556ce1528cf10bb3
   UICircularProgressRing: 35c3d291b679161ea27fb6216fee58c40a4bb597
 
-PODFILE CHECKSUM: ca0cc70ac1bfbfba326976499cb7dd9b0f8114a7
+PODFILE CHECKSUM: 4ae6e4e31f72a34a870f0aa3902290c0e4d9c5b8
 
 COCOAPODS: 1.2.1

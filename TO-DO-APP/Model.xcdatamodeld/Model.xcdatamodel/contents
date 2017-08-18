@@ -15,6 +15,6 @@
         <attribute name="to_time" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Task" positionX="-63" positionY="-18" width="128" height="225"/>
+        <element name="Task" positionX="-63" positionY="-18" width="128" height="223"/>
     </elements>
 </model>
