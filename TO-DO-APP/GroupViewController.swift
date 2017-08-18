@@ -60,9 +60,9 @@ class GroupViewController: UIViewController, UITableViewDataSource, UITableViewD
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? GroupTableViewCell else {return UITableViewCell()}
-        if let nameGroup = countTaskInGroup?[indexPath.row].nameGroup,
+        if let nameGroup = countTaskInGroup?[indexPath.row].name,
             let numberTask = countTaskInGroup?[indexPath.row].numberTask,
-            let imageGroup = countTaskInGroup?[indexPath.row].imageGroup {
+            let imageGroup = countTaskInGroup?[indexPath.row].image {
             cell.updateCell(nameGroup: nameGroup, numberTask: String(numberTask), imageGroup: imageGroup)
         }
         return cell
@@ -70,6 +70,13 @@ class GroupViewController: UIViewController, UITableViewDataSource, UITableViewD
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return CGFloat(200)
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let groupId = countTaskInGroup?[indexPath.row].groupId else {return}
+        let destinationScreen = AutoViewController()
+        destinationScreen.groupId = groupId
+        navigationController?.pushViewController(destinationScreen, animated: true)
     }
 
     @IBAction func popularButtonClicked (_ sender: Any) {
