@@ -12,6 +12,7 @@ class AutoViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBOutlet weak var taskTableView: UITableView!
     var listTask = [[String : Any]]()
+    var groupId:Int?
     override func viewDidLoad() {
         super.viewDidLoad()
         taskTableView.delegate = self
@@ -42,7 +43,8 @@ class AutoViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.listTask = SqliteManager.shared.findTaskByGroup()
+        guard let idOfGroup = groupId else {return}
+        self.listTask = SqliteManager.shared.findTaskByGroup(idOfGroup)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

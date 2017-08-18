@@ -9,13 +9,15 @@
 import Foundation
 
 class Group {
-    var nameGroup = ""
+    var groupId = 1
+    var name = ""
     var numberTask = 0
-    var imageGroup = ""
+    var image = ""
 
-    init(nameGroup: String, numberTask: Int, imageGroup: String) {
-        self.nameGroup = nameGroup
+    init(groupId: Int, name: String, numberTask: Int, image: String) {
+        self.groupId = groupId
+        self.name = name
         self.numberTask = numberTask
-        self.imageGroup = imageGroup
+        self.image = image
     }
 }
